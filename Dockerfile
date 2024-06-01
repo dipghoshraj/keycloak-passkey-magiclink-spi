@@ -28,3 +28,6 @@ ENV NAMESPACE=keycloak \
     KC_PROXY=edge
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev"]
+
+
+# docker run -p 8080:8080 --name keycloak-custom -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin keycloak-custom:latest
