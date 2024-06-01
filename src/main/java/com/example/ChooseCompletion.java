@@ -37,9 +37,8 @@ public class ChooseCompletion implements RequiredActionProvider {
 
     @Override
     public void requiredActionChallenge(RequiredActionContext context) {
-        jakarta.ws.rs.core.Response challenge = context.form().createForm("custom_terms.ftl");
+        jakarta.ws.rs.core.Response challenge = context.form().createForm("choose-completion-method.ftl");
         context.challenge(challenge);
-
     }
 
     @Override
