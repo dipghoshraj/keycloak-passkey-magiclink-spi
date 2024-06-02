@@ -45,15 +45,19 @@ public class ChooseCompletion implements RequiredActionProvider {
     public void processAction(RequiredActionContext context) {
         String selectedMethod = context.getHttpRequest().getDecodedFormParameters().getFirst("completion_method");
 
+        UserModel user = context.getUser();
+
+
+        user.removeRequiredAction("webauthn-register");
+        // user.removeRequiredAction("magic-link");
+
         if ("email".equals(selectedMethod)) {
-            UserModel user = context.getUser();
             user.addRequiredAction(UserModel.RequiredAction.VERIFY_EMAIL);
             context.success();
         } else if ("webauthn".equals(selectedMethod)) {
             context.getUser().addRequiredAction("webauthn-register");
             context.success();
         } else if ("magic-link".equals(selectedMethod)) {
-            UserModel user = context.getUser();
             String magicLinkToken = UUID.randomUUID().toString();
             context.getAuthenticationSession().setAuthNote("magicLinkToken", magicLinkToken);
             context.getAuthenticationSession().setAuthNote("magicLinkEmail", user.getEmail());

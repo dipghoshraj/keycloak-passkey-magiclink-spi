@@ -5,8 +5,8 @@
 <body>
     <h1>Choose Completion Method</h1>
     <form action="${url.loginAction}" method="post">
-        <label for="email">Complete Registration via Email</label>
-        <input type="radio" id="email" name="completion_method" value="email">
+        <label for="email">Complete Registration via MAGIC LINK</label>
+        <input type="radio" id="magic-link" name="completion_method" value="magic-link">
         <br>
         <label for="webauthn">Complete Registration via WebAuthn</label>
         <input type="radio" id="webauthn" name="completion_method" value="webauthn">
