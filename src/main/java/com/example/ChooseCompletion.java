@@ -11,7 +11,7 @@ import org.keycloak.models.UserModel;
 // import java.io.StringWriter;
 // import java.util.HashMap;
 // import java.util.Map;
-import java.util.UUID;
+// import java.util.UUID;
 // import javax.ws.rs.core.Response;
 // import java.util.Locale;
 
@@ -58,11 +58,17 @@ public class ChooseCompletion implements RequiredActionProvider {
             context.getUser().addRequiredAction("webauthn-register");
             context.success();
         } else if ("magic-link".equals(selectedMethod)) {
-            String magicLinkToken = UUID.randomUUID().toString();
-            context.getAuthenticationSession().setAuthNote("magicLinkToken", magicLinkToken);
-            context.getAuthenticationSession().setAuthNote("magicLinkEmail", user.getEmail());
-            // Here you would send an email with the magic link
+            // String magicLinkToken = UUID.randomUUID().toString();
+            // context.getAuthenticationSession().setAuthNote("magicLinkToken", magicLinkToken);
+            // context.getAuthenticationSession().setAuthNote("magicLinkEmail", user.getEmail());
+
+            // MagicLinkAuthenticator authenticator = new MagicLinkAuthenticator();
+            // authenticator.authenticate(context.AuthenticationFlowContext());
+
             context.success();
+
+            // Here you would send an email with the magic link
+            // context.success();
         } else {
             context.challenge(context.form().setError(Messages.INVALID_REQUEST).createForm("choose-completion-method.ftl"));
         }
