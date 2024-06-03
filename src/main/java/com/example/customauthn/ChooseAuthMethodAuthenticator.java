@@ -33,8 +33,11 @@ public class ChooseAuthMethodAuthenticator implements Authenticator {
             context.success();
         } else if ("otp".equals(selectedMethod)) {
             user.removeRequiredAction("webauthn-register");
-            context.getAuthenticationSession().setAuthNote("selected_method", "magic link");
-            context.success();
+            // context.getAuthenticationSession().setAuthNote("selected_method", "magic link");
+
+            MagicLinkAuthenticator authenticator = new MagicLinkAuthenticator();
+            authenticator.authenticate(context);
+            // context.success();
         } else {
             context.failure(AuthenticationFlowError.INVALID_USER);
         }
