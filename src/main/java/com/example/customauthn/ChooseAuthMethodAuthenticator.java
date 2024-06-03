@@ -11,6 +11,7 @@ import org.keycloak.models.UserModel;
 // import org.keycloak.provider.ProviderConfigProperty;
 // import org.keycloak.provider.ProviderConfigurationBuilder;
 
+import com.example.auth.MagicLinkAuthenticator;
 // import java.util.List;
 
 public class ChooseAuthMethodAuthenticator implements Authenticator {
@@ -24,12 +25,15 @@ public class ChooseAuthMethodAuthenticator implements Authenticator {
     @Override
     public void action(AuthenticationFlowContext context) {
         String selectedMethod = context.getHttpRequest().getDecodedFormParameters().getFirst("auth_method");
+        UserModel user = context.getUser();
         
         if ("webauthn".equals(selectedMethod)) {
-            context.getAuthenticationSession().setAuthNote("selected_method", "webauthn");
+            user.addRequiredAction("webauthn-register");
+            // context.getAuthenticationSession().setAuthNote("selected_method", "webauthn");
             context.success();
         } else if ("otp".equals(selectedMethod)) {
-            context.getAuthenticationSession().setAuthNote("selected_method", "otp");
+            user.removeRequiredAction("webauthn-register");
+            context.getAuthenticationSession().setAuthNote("selected_method", "magic link");
             context.success();
         } else {
             context.failure(AuthenticationFlowError.INVALID_USER);
