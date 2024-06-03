@@ -11,6 +11,10 @@
   <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <junit.version>4.13.2</junit.version>
+        <keycloak.version>24.0.0</keycloak.version>
+        <lombok.version>1.18.30</lombok.version>
+        <auto-service.version>1.1.1</auto-service.version>
     </properties>
     
   <dependencies>
@@ -20,21 +24,27 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
+        <dependency>
+            <groupId>com.google.auto.service</groupId>
+            <artifactId>auto-service</artifactId>
+            <version>1.1.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi</artifactId>
-            <version>23.0.7</version> <!-- Replace with your Keycloak version -->
+            <version>24.0.0</version> <!-- Replace with your Keycloak version -->
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-services</artifactId>
-            <version>23.0.7</version> <!-- Replace with your Keycloak version -->
+            <version>24.0.0</version> <!-- Replace with your Keycloak version -->
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi-private</artifactId>
-            <version>23.0.7</version> <!-- Replace with your Keycloak version -->
+            <version>24.0.0</version> <!-- Replace with your Keycloak version -->
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -45,18 +55,18 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi</artifactId>
-            <version>23.0.7</version> <!-- Replace with your Keycloak version -->
+            <version>24.0.0</version> <!-- Replace with your Keycloak version -->
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-services</artifactId>
-            <version>23.0.7</version> <!-- Replace with your Keycloak version -->
+            <version>24.0.0</version> <!-- Replace with your Keycloak version -->
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-server-spi-private</artifactId>
-            <version>23.0.7</version> <!-- Replace with your Keycloak version -->
+            <version>24.0.0</version> <!-- Replace with your Keycloak version -->
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -69,5 +79,38 @@
             <artifactId>freemarker</artifactId>
             <version>2.3.30</version>
         </dependency>
-        </dependencies>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>32.0.1-jre</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>3.0.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>

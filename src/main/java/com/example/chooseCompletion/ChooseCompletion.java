@@ -1,4 +1,4 @@
-package com.example;
+package com.example.chooseCompletion;
 // import java.util.Collections;
 
 import org.keycloak.authentication.RequiredActionContext;
