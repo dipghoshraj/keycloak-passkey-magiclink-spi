@@ -1,0 +1,4 @@
+com.example.auth.EmailOtpAuthenticatorFactory
+com.example.auth.MagicLinkAuthenticatorFactory
+com.example.auth.MagicLinkContinuationAuthenticatorFactory
+com.example.customauthn.ChooseAuthMethodAuthenticatorFactory
