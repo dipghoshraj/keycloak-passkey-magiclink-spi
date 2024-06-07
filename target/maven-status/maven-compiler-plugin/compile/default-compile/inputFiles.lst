@@ -1,6 +1,8 @@
 E:\custom-authentication\src\main\java\com\example\resources\BaseRealmResourceProvider.java
 E:\custom-authentication\src\main\java\com\example\customauthn\ChooseAuthMethodAuthenticatorFactory.java
 E:\custom-authentication\src\main\java\com\example\resources\MagicLinkResource.java
+E:\custom-authentication\src\main\java\com\example\customRestcred\CustomeResetCredentialChooseUser.java
+E:\custom-authentication\src\main\java\com\example\customRestcred\ResetOTP.java
 E:\custom-authentication\src\main\java\com\example\auth\EmailOtpAuthenticator.java
 E:\custom-authentication\src\main\java\com\example\auth\token\MagicLinkActionTokenHandlerFactory.java
 E:\custom-authentication\src\main\java\com\example\representation\MagicLinkRequest.java
@@ -10,7 +12,9 @@ E:\custom-authentication\src\main\java\com\example\resources\MagicLinkResourcePr
 E:\custom-authentication\src\main\java\com\example\auth\token\MagicLinkContinuationActionTokenHandlerFactory.java
 E:\custom-authentication\src\main\java\com\example\chooseCompletion\ChooseCompletionFactory.java
 E:\custom-authentication\src\main\java\com\example\chooseCompletion\ChooseCompletion.java
+E:\custom-authentication\src\main\java\com\example\customRestcred\AbstractSetRequiredActionAuthenticator.java
 E:\custom-authentication\src\main\java\com\example\auth\MagicLinkContinuationAuthenticatorFactory.java
+E:\custom-authentication\src\main\java\com\example\customePassordUpdate\CustomeUpdatePasswordFactory.java
 E:\custom-authentication\src\main\java\com\example\auth\MagicLinkAuthenticatorFactory.java
 E:\custom-authentication\src\main\java\com\example\customauthn\ChooseAuthMethodAuthenticator.java
 E:\custom-authentication\src\main\java\com\example\auth\MagicLinkAuthenticator.java
@@ -21,7 +25,10 @@ E:\custom-authentication\src\main\java\com\example\auth\util\MagicLinkConstants.
 E:\custom-authentication\src\main\java\com\example\MagicLink.java
 E:\custom-authentication\src\main\java\com\example\auth\token\MagicLinkActionToken.java
 E:\custom-authentication\src\main\java\com\example\auth\token\MagicLinkContinuationActionToken.java
+E:\custom-authentication\src\main\java\com\example\customRestcred\CustomeResetPassword.java
 E:\custom-authentication\src\main\java\com\example\auth\token\MagicLinkContinuationLinkActionTokenHandler.java
+E:\custom-authentication\src\main\java\com\example\customePassordUpdate\CustomeUpdatePassword.java
 E:\custom-authentication\src\main\java\com\example\resources\MagicLinkResourceProviderFactory.java
+E:\custom-authentication\src\main\java\com\example\customRestcred\CustomeResetCredentialEmail.java
 E:\custom-authentication\src\main\java\com\example\representation\MagicLinkResponse.java
 E:\custom-authentication\src\main\java\com\example\resources\CorsResource.java
