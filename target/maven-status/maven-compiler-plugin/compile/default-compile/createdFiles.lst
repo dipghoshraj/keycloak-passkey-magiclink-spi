@@ -1,6 +1,8 @@
 com\example\customauthn\ChooseAuthMethodAuthenticator.class
 com\example\resources\AbstractAdminResource.class
 META-INF\services\org.keycloak.services.resource.RealmResourceProviderFactory
+com\example\customePassordUpdate\CustomeUpdatePassword.class
+com\example\customRestcred\AbstractSetRequiredActionAuthenticator.class
 com\example\resources\MagicLinkResourceProviderFactory.class
 com\example\resources\BaseRealmResourceProvider.class
 com\example\auth\MagicLinkContinuationAuthenticator.class
@@ -12,9 +14,11 @@ com\example\auth\MagicLinkAuthenticator.class
 com\example\auth\MagicLinkContinuationAuthenticatorFactory.class
 META-INF\services\org.keycloak.authentication.actiontoken.ActionTokenHandlerFactory
 com\example\auth\EmailOtpAuthenticator.class
+com\example\customRestcred\CustomeResetCredentialChooseUser.class
 com\example\MagicLink.class
 com\example\auth\model\MagicLinkContinuationBean.class
 com\example\auth\token\MagicLinkActionTokenHandlerFactory.class
+com\example\customRestcred\ResetOTP.class
 com\example\auth\token\MagicLinkActionToken.class
 com\example\customauthn\ChooseAuthMethodAuthenticatorFactory.class
 com\example\auth\token\MagicLinkActionTokenHandler.class
@@ -22,6 +26,7 @@ com\example\resources\MagicLinkResource.class
 com\example\resources\MagicLinkResourceProvider.class
 com\example\auth\token\MagicLinkContinuationLinkActionTokenHandler.class
 com\example\chooseCompletion\ChooseCompletionFactory.class
+com\example\customRestcred\CustomeResetPassword.class
 com\example\MagicLink$2.class
 com\example\auth\util\MagicLinkConstants.class
 com\example\chooseCompletion\ChooseCompletion.class
@@ -29,3 +34,4 @@ com\example\representation\MagicLinkRequest.class
 com\example\auth\token\MagicLinkContinuationActionToken.class
 com\example\auth\EmailOtpAuthenticatorFactory.class
 com\example\auth\token\MagicLinkContinuationActionTokenHandlerFactory.class
+com\example\customRestcred\CustomeResetCredentialEmail.class
