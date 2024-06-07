@@ -27,6 +27,7 @@ com\example\resources\MagicLinkResourceProvider.class
 com\example\auth\token\MagicLinkContinuationLinkActionTokenHandler.class
 com\example\chooseCompletion\ChooseCompletionFactory.class
 com\example\customRestcred\CustomeResetPassword.class
+com\example\customePassordUpdate\CustomeUpdatePasswordFactory.class
 com\example\MagicLink$2.class
 com\example\auth\util\MagicLinkConstants.class
 com\example\chooseCompletion\ChooseCompletion.class

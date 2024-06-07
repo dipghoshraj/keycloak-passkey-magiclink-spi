@@ -47,11 +47,17 @@ public class CustomeResetPassword implements Authenticator, AuthenticatorFactory
 
     @Override
     public void authenticate(AuthenticationFlowContext context) {
-        if (context.getExecution().isRequired() ||
-                (context.getExecution().isConditional() &&
-                        configuredFor(context))) {
-            context.getAuthenticationSession().addRequiredAction(UserModel.RequiredAction.UPDATE_PASSWORD);
-        }
+        // if (context.getExecution().isRequired() ||
+        //         (context.getExecution().isConditional() &&
+        //                 configuredFor(context))) {
+        //     context.getAuthenticationSession().addRequiredAction("custom-update-password");
+        //     // addRequiredAction("custom-update-password");
+        // }
+
+        UserModel user = context.getUser();
+        System.out.println(user);
+        // context.getAuthenticationSession().addRequiredAction(UserModel.RequiredAction.UPDATE_PASSWORD);
+        user.addRequiredAction("custom-update-password");
         context.success();
     }
 
