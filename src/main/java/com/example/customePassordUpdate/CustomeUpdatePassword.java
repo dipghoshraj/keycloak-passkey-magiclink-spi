@@ -82,6 +82,9 @@ public class CustomeUpdatePassword implements RequiredActionProvider {
                     .queryParam("code_challenge", generateCodeChallenge(password))
                     .build();
 
+            // Remove custome update password from the required action
+            user.removeRequiredAction("custom-update-password");
+
             // Perform the actual redirect to the login page
             Response response = Response.seeOther(loginUri).build();
             context.challenge(response);

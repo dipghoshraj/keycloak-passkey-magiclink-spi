@@ -1,6 +1,6 @@
 FROM quay.io/keycloak/keycloak:23.0.7 as builder
 
-COPY target/custom-authentication-1.0-SNAPSHOT.jar /opt/keycloak/providers/
+COPY target/custom-authentication-1.0.2.jar /opt/keycloak/providers/
 
 ENV KC_HEALTH_ENABLED=true \  
     KC_METRICS_ENABLED=true \  
