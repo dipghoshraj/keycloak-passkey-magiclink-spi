@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 import lombok.extern.jbosslog.JBossLog;
 import org.keycloak.Config;
 import org.keycloak.authentication.AuthenticationFlowContext;
-import org.keycloak.authentication.Authenticator;
+// import org.keycloak.authentication.Authenticator;
 import org.keycloak.authentication.actiontoken.DefaultActionToken;
 import org.keycloak.common.util.Time;
 import org.keycloak.email.EmailException;
@@ -41,7 +41,7 @@ import org.keycloak.models.UserModel;
 import org.keycloak.models.utils.KeycloakModelUtils;
 import org.keycloak.protocol.oidc.OIDCLoginProtocol;
 import org.keycloak.protocol.oidc.utils.RedirectUtils;
-import org.keycloak.provider.ProviderFactory;
+// import org.keycloak.provider.ProviderFactory;
 import org.keycloak.services.Urls;
 import org.keycloak.services.resources.LoginActionsService;
 import org.keycloak.services.resources.RealmsResource;
@@ -428,8 +428,8 @@ public class MagicLink {
 
     if (!hasExecution) {
       log.infof("adding execution %s for auth flow for %s", providerId, flow.getAlias());
-      ProviderFactory f =
-          session.getKeycloakSessionFactory().getProviderFactory(Authenticator.class, providerId);
+      // ProviderFactory f =
+      //     session.getKeycloakSessionFactory().getProviderFactory(Authenticator.class, providerId);
       AuthenticationExecutionModel execution = new AuthenticationExecutionModel();
       execution.setParentFlow(flow.getId());
       execution.setRequirement(requirement);
