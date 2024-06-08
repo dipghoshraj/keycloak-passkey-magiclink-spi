@@ -1,7 +1,7 @@
 package com.example.resources;
 
-import jakarta.validation.constraints.*;
-import jakarta.ws.rs.*;
+// import jakarta.validation.constraints.*;
+// import jakarta.ws.rs.*;
 import jakarta.ws.rs.NotAuthorizedException;
 import jakarta.ws.rs.NotFoundException;
 import jakarta.ws.rs.core.HttpHeaders;
