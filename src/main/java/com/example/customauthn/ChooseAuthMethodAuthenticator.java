@@ -25,12 +25,14 @@ public class ChooseAuthMethodAuthenticator implements Authenticator {
     @Override
     public void action(AuthenticationFlowContext context) {
         String selectedMethod = context.getHttpRequest().getDecodedFormParameters().getFirst("auth_method");
+        System.out.println(selectedMethod);
+        System.out.println("selectedMethod");
         UserModel user = context.getUser();
         
         if ("webauthn".equals(selectedMethod)) {
             user.addRequiredAction("webauthn-register");
             context.success();
-        } else if ("otp".equals(selectedMethod)) {
+        } else if ("magic-link".equals(selectedMethod)) {
             user.removeRequiredAction("webauthn-register");
             MagicLinkAuthenticator authenticator = new MagicLinkAuthenticator();
             authenticator.authenticate(context);

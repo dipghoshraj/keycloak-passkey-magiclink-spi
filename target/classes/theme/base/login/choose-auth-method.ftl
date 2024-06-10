@@ -1,15 +1,12 @@
 <form id="kc-select-auth-method-form" action="${url.loginAction}" method="post">
-    <div>
-        <label>
-            <input type="radio" name="auth_method" value="webauthn" /> Register with WebAuthn
-        </label>
-    </div>
-    <div>
-        <label>
-            <input type="radio" name="auth_method" value="otp" /> Send OTP
-        </label>
-    </div>
-    <div>
-        <button type="submit">Submit</button>
-    </div>
+    <input type="hidden" id="completion_method" name="auth_method">
+    <button type="button" class="completion-method-btn" onclick="submitForm('webauthn')">Web Authn register</button>
+    <button type="button" class="completion-method-btn" onclick="submitForm('magic-link')"> Magic link flow</button>
 </form>
+
+<script>
+        function submitForm(method) {
+            document.getElementById('completion_method').value = method;
+            document.getElementById('kc-select-auth-method-form').submit();
+        }
+</script>
