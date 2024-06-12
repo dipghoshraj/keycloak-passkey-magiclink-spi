@@ -16,7 +16,6 @@
  */
 package com.example.customRestcred;
 
-import org.keycloak.models.DefaultActionTokenKey;
 import org.keycloak.Config;
 import org.keycloak.authentication.*;
 import org.keycloak.authentication.actiontoken.resetcred.ResetCredentialsActionToken;
@@ -55,9 +54,17 @@ public class CustomeResetCredentialEmail implements Authenticator, Authenticator
 
     @Override
     public void authenticate(AuthenticationFlowContext context) {
+
+
         UserModel user = context.getUser();
         AuthenticationSessionModel authenticationSession = context.getAuthenticationSession();
         String username = authenticationSession.getAuthNote(AbstractUsernameFormAuthenticator.ATTEMPTED_USERNAME);
+
+        logger.debugf("Authentication session calling");
+
+
+        // context.challenge(context.form().createForm("view-email.ftl"));
+        // return;
 
         // we don't want people guessing usernames, so if there was a problem obtaining the user, the user will be null.
         // just reset login for with a success message
@@ -103,7 +110,10 @@ public class CustomeResetCredentialEmail implements Authenticator, Authenticator
                          .user(user)
                          .detail(Details.USERNAME, username)
                          .detail(Details.EMAIL, user.getEmail()).detail(Details.CODE_ID, authenticationSession.getParentSession().getId()).success();
-            context.forkWithSuccessMessage(new FormMessage(Messages.EMAIL_SENT));
+            // context.forkWithSuccessMessage(new FormMessage(Messages.EMAIL_SENT));
+            context.challenge(context.form().createForm("view-email.ftl"));
+            return;
+
         } catch (EmailException e) {
             event.clone().event(EventType.SEND_RESET_PASSWORD)
                     .detail(Details.USERNAME, username)
@@ -148,7 +158,7 @@ public class CustomeResetCredentialEmail implements Authenticator, Authenticator
 
     @Override
     public String getDisplayType() {
-        return "Send Reset Email";
+        return "Custome Send Reset Email";
     }
 
     @Override
@@ -177,7 +187,7 @@ public class CustomeResetCredentialEmail implements Authenticator, Authenticator
 
     @Override
     public String getHelpText() {
-        return "Send email to user and wait for response.";
+        return "Send email to user and wait for response customized.";
     }
 
     @Override

@@ -28,6 +28,7 @@ public class CustomeUpdatePassword implements RequiredActionProvider {
         context.challenge(context.form()
                 .setAttribute("realm", context.getRealm())
                 .setAttribute("user", context.getUser())
+                .setAttribute("userEmail", context.getUser().getEmail())
                 .createForm("custom-update-password.ftl"));
     }
 
@@ -42,6 +43,7 @@ public class CustomeUpdatePassword implements RequiredActionProvider {
             context.challenge(context.form()
                     .setAttribute("realm", context.getRealm())
                     .setAttribute("user", context.getUser())
+                    .setAttribute("userEmail", context.getUser().getEmail())
                     .setError(Messages.MISSING_PASSWORD)
                     .createForm("custom-update-password.ftl"));
             return;
@@ -51,6 +53,7 @@ public class CustomeUpdatePassword implements RequiredActionProvider {
             context.challenge(context.form()
                     .setAttribute("realm", context.getRealm())
                     .setAttribute("user", context.getUser())
+                    .setAttribute("userEmail", context.getUser().getEmail())
                     .setError(Messages.INVALID_PASSWORD_CONFIRM)
                     .createForm("custom-update-password.ftl"));
             return;
@@ -92,6 +95,7 @@ public class CustomeUpdatePassword implements RequiredActionProvider {
             context.challenge(context.form()
                     .setAttribute("realm", context.getRealm())
                     .setAttribute("user", context.getUser())
+                    .setAttribute("userEmail", context.getUser().getEmail())
                     .setError(Messages.INVALID_PASSWORD)
                     .createForm("custom-update-password.ftl"));
         }
