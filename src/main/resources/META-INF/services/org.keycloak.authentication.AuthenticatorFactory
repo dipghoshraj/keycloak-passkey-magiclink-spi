@@ -1,2 +1,3 @@
 com.example.customauthn.ChooseAuthMethodAuthenticatorFactory
 com.example.customRestcred.CustomeResetPassword
+com.example.customRestcred.CustomeResetCredentialEmail

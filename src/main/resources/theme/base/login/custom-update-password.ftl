@@ -12,6 +12,7 @@
         </div>
         <div id="kc-form" class="content-area">
             <h1>${msg("updatePasswordTitle")}</h1>
+            <p>Your email: ${userEmail}</p>
             <form id="kc-update-password-form" action="${url.loginAction}" method="post">
                 <div class="form-group">
                     <label for="password">${msg("newPassword")}</label>
