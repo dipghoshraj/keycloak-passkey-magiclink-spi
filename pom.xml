@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-services</artifactId>
-            <version>24.0.5</version> <!-- Replace with your Keycloak version -->
+            <version>26.6.3</version> <!-- Replace with your Keycloak version -->
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
@@ -61,7 +61,7 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-services</artifactId>
-            <version>24.0.5</version> <!-- Replace with your Keycloak version -->
+            <version>26.6.3</version> <!-- Replace with your Keycloak version -->
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
